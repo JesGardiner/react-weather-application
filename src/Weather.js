@@ -6,6 +6,7 @@ import WeatherInfo from "./WeatherInfo";
 export default function Weather(props) {
 const [weatherData, setWeatherData] = useState({ ready : false});
 const [city, setCity] = useState(props.defaultCity);
+
 function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -36,33 +37,33 @@ function handleCityChange(event) {
 }
 
 if (weatherData.ready) {
-    return (
-      <div className="Weather">
-        <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-9">
-              <input
-                type="search"
-                placeholder="Enter a city..."
-                className="form-control"
-                autoFocus="on"
-                onChange={handleCityChange}
-              />
-            </div>
-            <div className="col-3">
-              <input
-                type="submit"
-                value="Search"
-                className="btn btn-primary w-100"
-              />
-            </div>
+  return (
+    <div className="Weather">
+      <form onSubmit={handleSubmit}>
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="search"
+              placeholder="Enter a city.."
+              className="form-control"
+              autoFocus="on"
+              onChange={handleCityChange}
+            />
           </div>
-        </form>
-        <WeatherInfo data={weatherData}/>
-      </div>
-    );
+          <div className="col-3">
+            <input
+              type="submit"
+              value="Search"
+              className="btn btn-primary w-100"
+            />
+          </div>
+        </div>
+      </form>
+      <WeatherInfo data={weatherData} />
+    </div>
+  );
 } else {
-    search();
-    return "Loading...";
-  }
+  search();
+  return "Loading...";
+}
 }
