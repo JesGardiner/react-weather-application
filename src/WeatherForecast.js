@@ -13,19 +13,25 @@ function handleResponse(response) {
   }
 
   if (loaded) {
-    console.log(forecast);
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
-            <WeatherForecastDay data={forecast[0]} />
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+          if (index < 5) {
+          return (
+            <div className="col" key={index}>
+              <WeatherForecastDay data={dailyForecast} />
+            </div>
+          );
+        } else {
+            return null;
+        }
+    })}
         </div>
       </div>
     );
-
 } else {
-    let apiKey = "97c2f6a3b34509ac62090edc5d18d949";
+    let apiKey = "f8e6a9e3d6fde87cb38868da460b1371";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
