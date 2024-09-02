@@ -16,11 +16,6 @@ useEffect(() => {
   setLoaded(false);
 }, [props.coordinates]);
 
-function handleResponse(response) {
-    setForecast(response.data.daily);
-    setLoaded(true);
-  }
-
   if (loaded) {
     return (
       <div className="WeatherForecast">
