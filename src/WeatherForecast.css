@@ -10,7 +10,7 @@
 }
 
 .WeatherForecast-temperature-min {
-    opacity: 0.9;
+    opacity: 0.6;
     margin-left: 10px;
-    color: rgb(180, 174, 174);
+    color: #f96d00;
 }
