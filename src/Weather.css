@@ -1,24 +1,26 @@
 .Weather {
-    border: 1px solid #2A2B3A;
     font-family: "Poppins";
     padding: 18px;
     border-radius: 4px;
 }
 
 .Weather h1 {
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 700;
-  margin: 20px 0 0 0;
+  margin: 20px 0 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
   line-height: 29px;
+  color: #5c715e;
 }
 
 .Weather ul {
-  margin: 0;
+  margin: 5;
   padding: 0;
 }
 
 .Weather li {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 200;
   line-height: 19px;
   list-style: none;
@@ -32,17 +34,50 @@
 
 .Weather .temperature {
   font-weight: thin;
-  color: rgb(33, 33, 33);
-  font-size: 64px;
+  color: #26243d;
+  font-size: 80px;
   margin-left: 5px;
   font-weight: 400;
 }
 
 .Weather .unit {
-  color: rgb(33, 33, 33);
+  color: #4f5e69;
   font-size: 16px;
   font-weight: 400;
   position: relative;
   line-height: 1;
   top: -34px;
+}
+
+.Weather .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #568d9b;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: outline 0.3s;
+}
+
+.Weather .form-control:hover {
+  outline: 1px solid #568d9b;
+  border: none;
+}
+
+.Weather .form-control:focus {
+  border: 1px solid #568d9b;
+  outline: none;
+}
+
+.Weather .btn:hover {
+  background-color: #568d9b;
+}
+
+.Weather .btn {
+  background-color: #568d9b;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
 }

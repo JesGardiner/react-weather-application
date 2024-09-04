@@ -7,4 +7,22 @@
   font-size: 11px;
   margin: 30px;
   font-family: "Poppins";
+  color:#4f5e69;
+}
+
+.container {
+  background: white;
+  opacity: 0.9;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 650px;
+  padding-top: 30px;
+  margin: 70px auto;
+  box-shadow: rgba(19, 20, 45, 0.08) 0px 8px 8px 0;
+}
+
+body {
+  background-image: url("/mountain-view.jpeg");
+  background-repeat: "no-repeat";
+  background-size: "cover";
 }
